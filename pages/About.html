@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="loginstyle.css">
+<link rel="stylesheet" href="popup.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap');
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif,'Cinzel', serif,'Indie Flower', 'Graduate',cursive,'Nunito';
+  background-color:#f5f5f5;
+  background: linear-gradient(rgba(246, 252, 255, 0.801), rgba(152, 193, 247, 0.2))
+}   
+
+.container {
+  padding: 30px;
+  border-radius: 10px;
+}
+.container-navber{
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding-left: 200px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding-left: 20px;
+  padding-right: 50px;
+  padding-top:50px;
+  padding-bottom :50px;
+}
+ /*CSS (CONTAINER- PROMISES Section) */
+
+.container-fluid-services {
+  padding:40px;
+    margin-right: 210px;
+    margin-left: 200px;
+    border-radius: 10px;
+  }
+.large-font {
+  font-size: 45px;
+}
+
+.xlarge-font {
+  font-size: 60px
+}
+/*CSS (NEW NAVIGATION Section) */
+.navbar {
+    margin-top:0;
+    margin-bottom: 0px;
+    background-color:black;
+    background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+    height: 60px;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Roboto, sans-serif;
+  }
+  .navbar {
+    color: whitesmoke !important;
+    padding-right: 100px;
+  }
+  .navbar li a{
+    color: whitesmoke !important;
+  }
+  .navbar-brand{
+    margin:0;
+    padding:0;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #110b68 !important;
+    background-color:whitesmoke !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: white ;
+    color: #110b68 !important;
+    background-color: whitesmoke;
+  }
+  
+.logo{
+    margin-left:150px;
+    height: 60px;
+    padding-right: 15px;
+    padding-left: 5px;
+}
+ /*CSS (Button Section) */
+
+.button {
+  margin-top:15px;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #99a599;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: whitesmoke;
+    font-family: 'Graduate';
+    font-weight: 400;
+    margin-bottom: 30px;
+  } 
+img {
+  display: block;
+  height: 300px;
+  max-width: 700px;
+  border-radius: 8px;
+}
+ /*CSS (ABOUT US Section) */
+
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+  }
+=
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  } 
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+ }
+ /*CSS (SLIDE Section) */
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+</style>
+
+<!-- Function (SLIDE Section) -->
+<script>
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  } 
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+     modal.style.display = "none";
+    }
+  }
+</script>
+
+<!-- Function (SLIDE Section) -->
+<script>
+$(document).ready(function(){
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+           window.location.hash = hash;
+      });
+    } 
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  
+
+
+
+<!-- Container (CAREER PATHS Section) -->
+<div id="paths" class="container">
+  <br><br>
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:hsl(240,100%,10%);font-family:'Graduate', serif;"><b>Career Paths</b></h1>
+      <h1 class="large-font" style="color:rgb(196, 125, 4);font-family:'Indie Flower', cursive;"><b>Want to build your career?</b></h1>
+      <p><span style="font-size:36px; font-family: 'Nunito','sans-serif';">Find the right courses!</span><br><br>
+      <span style="font-size:20px;font-family: 'Nunito','sans-serif';"> It is normal to feel lost in the pool of the online courses available. We here in CareerQuest, find the right course and compare their reviews and prices across various learning platforms.</span><br></p>
+      <button class="button" style="background-color:lightseagreen">EXPLORE COURSES</button>
+    </div>
+    <div class="column-33">
+        <img src="https://cdn.vox-cdn.com/thumbor/VZeT43bAJuhC2nE90N6ACbqSyB0=/cdn.vox-cdn.com/uploads/chorus_asset/file/3397278/GIF2_1200x675_v2.0.gif" width="400" height="700">
+    </div>
+  </div>
+</div>
+
+<!-- Container (SKILLS Section) -->
+<div id="skills"></div>
+  <br><br><br>
+  <div class="container" style="background-color:rgb(15, 44, 77)">
+  <div class="row slideanim">
+    <div class="column-33">
+      <img src="https://ksr-ugc.imgix.net/assets/014/996/681/2abc6ce9e7b1064b35e084cfea948c4e_original.gif?ixlib=rb-2.1.0&w=680&fit=max&v=1482861131&auto=format&gif-q=50&q=92&s=49610e22bc75d8e71d4993e626509c55" alt="App" width="400" height="700">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:whitesmoke;font-family:'Graduate';"><b>Skills</b></h1>
+      <h1 class="large-font"style="color:lightsteelblue;font-family:'Indie Flower', cursive;"><b>Want to upgrade your skills?</b></h1>
+      <p><span style="font-size:36px; color:gainsboro;font-family: 'Nunito','sans-serif';">Become a Master!</span><br><br>
+      <span style="font-size:20px; color:gainsboro;font-family: 'Nunito','sans-serif';"> During this competitive era, you can never have too many skills. We help you find skills needed for your Job Role and curate all available courses for you here in Career Quest.</span><br></p>
+      <button class="button" style="background-color:lightseagreen">EXPLORE SKILLS</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Container (SIGN UP Section) -->
+<div id="sign" class="container">
+  <br><br><br>
+  <div class="row slideanim">
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:hsl(240,100%,10%);font-family:'Graduate'"><b>Sign UP Today</b></h1>
+      <h1 class="large-font" style="color:rgb(196, 125, 4);font-family:'Indie Flower', cursive;"><b>Your chance to shape your career</b></h1>
+      <p><span style="font-size:36px;font-family: 'Nunito','sans-serif';">Get that edge!</span><br><br>
+      <span style="font-size:20px;font-family: 'Nunito','sans-serif';"> Explore our quests and level up your resume that CANNOT BE SAID NO to!</span><br></p>
+      <button class="button" style="background-color:lightseagreen">SIGN ME UP</button>
+    </div>
+    <div class="column-33">
+        <img src="https://media.tenor.com/images/7a247349124662e23b5c6ed28011e490/tenor.gif" width="350" height="900" >
+    </div>
+  </div> 
+  <br><br> 
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services">
+  <br><br><br></div>
+<div class="container-fluid-services text-center" style="font-family:'Roboto';color:lightsteelblue;background-color:rgb(15, 44, 77) ;" >
+  <h2 style="color:lightseagreen; font-family:'Graduate' ">Our Promise</h2>
+  <h4>One place for every plan</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4" style="font-family:'Roboto', cursive;">
+      <span class="glyphicon glyphicon-road logo-small" style="color:lightseagreen"></span>
+      <h4>FIND YOUR JOURNEY</h4>
+      <p>Handmade Career Path for you..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-education logo-small" style="color:lightseagreen"></span>
+      <h4>RIGHT FOR YOU</h4>
+      <p>Courses right for your job..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small" style="color:lightseagreen"></span>
+      <h4>JOB QUALITY</h4>
+      <p>Quality courses a click away..</p>
+    </div>
+  </div>  
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-ok logo-small" style="color:lightseagreen"></span>
+      <h4>GENUINE</h4>
+      <p>Get true reviews on every content..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small" style="color:lightseagreen"></span>
+      <h4>CERTIFIED</h4>
+      <p>Get top courses with certification..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small" style="color:lightseagreen"></span>
+      <h4>LOVE</h4>
+      <p>Made with you in mind..</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid-services text-center bg-grey">
+  <h2 style="font-family:'Graduate';color:rgb(1, 1, 31)">About US</h2><br>
+  <h4 style="font-family:'Graduate';color:rgb(196, 125, 4)">Who we are</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="assets/images/sowmya.png" alt="Sowmya" width="400" height="300">
+        <p>Sowmya J Iyer</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="assets/images/kevin.PNG" alt="Kevin" width="400" height="300">
+        <p>Kevin Alex Moses</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="assets/images/meghna.PNG" alt="Meghna" width="400" height="300">
+        <p>Meghna Shekhar</p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span style="color:rgb(196, 125, 4);font-size: 30px; margin-bottom: 5px;" class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <h2 style="color:hsl(240,100%,10%); font-family:'Roboto;"><strong>Return to Page Start </strong></h2>
+</footer>
+</body>
+</html>
